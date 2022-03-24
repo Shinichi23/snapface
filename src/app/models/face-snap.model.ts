@@ -1,6 +1,6 @@
 // Méthode plus simple.
 
-export class faceSnap {
+export class FaceSnap {
 
     constructor(
 
@@ -8,7 +8,8 @@ export class faceSnap {
             public description: string, 
             public imageUrl: string, 
             public createdDate: Date, 
-            public snaps: number){
+            public snaps: number)
+            {}
 }
 
 /* 

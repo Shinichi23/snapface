@@ -1,11 +1,11 @@
 <div>
-    <h2>{{title}}</h2>
-    <p>Date de création : {{createdDate}}</p>
-    <img [src] ='imageUrl' [alt] = "title">
-    <p>{{description}}</p>
+    <h2>{{faceSnap.title}}</h2>
+    <p>Date de création : {{faceSnap.createdDate}}</p>
+    <img [src] ='faceSnap.imageUrl' [alt] = "faceSnap.title">
+    <p>{{faceSnap.description}}</p>
     <p>
         <button (click)="onSnap()">{{buttonText}}</button>
-        {{snaps}}🔥
+        {{faceSnap.snaps}}🔥
         
     </p>
 </div>
