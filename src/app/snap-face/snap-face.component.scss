@@ -1,6 +1,3 @@
-* {
-  background-color: greenyellow;
-}
 .face-snap-card {
   box-sizing: border-box;
   width: 50%;
@@ -18,8 +15,7 @@
     font-size: 16px;
   }
   button {
-    background-color: black;
-    color: greenyellow;
+    background-color: transparent;
     box-sizing: border-box;
     padding: 5px 10px;
     border: none;
@@ -31,6 +27,18 @@
     &:active {
       transform: translate(1px, 1px);
       box-shadow: lightgray 0 0 5px;
+    }
+  }
+}
+
+.snapped {
+  background-color: rgba(lightgreen, 0.4);
+  color: darkgreen;
+  button {
+    box-shadow: lightgreen 3px 3px 7px;
+    color: darkgreen;
+    &:active {
+      box-shadow: lightgreen 0 0 5px;
     }
   }
 }
