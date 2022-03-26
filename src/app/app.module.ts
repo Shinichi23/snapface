@@ -1,21 +1,32 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { registerLocaleData } from '@angular/common';
+import * as fr from '@angular/common/locales/fr'
 import { AppComponent } from './app.component';
 import { SnapFaceComponent } from './snap-face/snap-face.component';
 import { InspectorModule } from '@ngneat/inspector';
 import { environment } from '../environments/environment';
+import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SnapFaceComponent
+    SnapFaceComponent,
+    FaceSnapListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     environment.production ? [] : InspectorModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: "fr-FR"}
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    registerLocaleData(fr.default)
+  }
+ }
