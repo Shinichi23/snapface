@@ -1,6 +1,7 @@
 // Méthode plus simple.
 
 export class FaceSnap {
+    id!: number;
     title!: string;
     description!: string;
     imageUrl!: string;
